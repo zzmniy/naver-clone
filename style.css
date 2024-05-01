@@ -1,7 +1,10 @@
-html, body {
+html, body, form{
   margin: 0px;
   padding: 0px;
+}
 
+*{
+  box-sizing: border-box;
 }
 
 :root {
@@ -84,47 +87,153 @@ html, body {
 }
 
 #header{
+  position: relative;
   text-align: left;
+  height: 64px;
+}
+
+#header-hamburger, #header-naverpay, #header-talk, #header-notice{
+  position: absolute;
+  top: 18px;
+  display: inline-block;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 0;
+  cursor: pointer;
+}
+
+#header-hamburger:hover::before,#header-naverpay:hover::before, 
+#header-talk:hover::before, #header-notice:hover::before{
+  position: absolute;
+  content: '';
+  background-color: var(--color_option_bg);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  z-index: -1;
+}
+
+#header-hamburger > div, #header-naverpay > div,
+#header-talk > div, #header-notice > div{
+  background-image: url(./img/sp_main.png);
+  background-repeat: no-repeat;
+  background-size: 444px 434px;
+  width: 26px;
+  height: 26px;
 }
 
 #header-hamburger{
-  display: inline-block;
-  margin-top: 18px;
+  left: -10px;
   padding: 10px;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-#header-hamburger:hover{
-  background-color: var(--color_option_bg);
-  border-radius: 50%;
 }
 
 #header-hamburger > div{
-  width: 26px;
-  height: 26px;
-  background-image: url(./img/sp_main.png);
   background-position: -314px -330px;
-  background-repeat: no-repeat;
-  background-size: 444px 434px;
 }
 
-#naver-pay{
-  display: inline-block;
-  margin-top: 18px;
-  padding: 10px;
-  background: none;
-  border: none;
-  cursor: pointer;
+#header-hamburger:hover > div {
+  position: relative;
+  top: 3px;
+  left: 1px;
 }
 
-#naver-pay > div {
+#header-hamburger:hover::before{
+  left: 2px;
+  right: 1px;
+  top: 4px;
+}
+
+#header-naverpay{
+  padding: 7px;
+  left: 43px;
+}
+
+#header-naverpay:hover > div {
+  position: relative;
+}
+
+#header-naverpay > div {
   width: 32px;
   height: 32px;
-  background-image: url(./img/sp_main.png);
   background-position: -295px -177px;
-  background-repeat: no-repeat;
-  background-size: 444px 434px;
 }
 
+#header-naverpay:hover::before{
+  left: 2px;
+  top: 2px;
+}
+
+.blind{
+  display: none;
+}
+
+#header-talk{
+  right: 40px;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+}
+
+#header-talk > div{
+  background-position: -364px -81px;
+}
+
+
+#header-talk:hover > div {
+  position: relative;
+}
+
+#header-talk:hover::before{
+  top: 1px;
+  left: 1px;
+}
+
+#header-notice{
+  right: -10px;
+  width: 46px;
+  padding: 10px;
+}
+
+#header-notice > div{
+  background-position: -364px -27px;
+}
+
+#header-notice:hover > div {
+  position: relative;
+}
+
+#header-notice:hover::before{
+  top: 1px;
+  left: 1px;
+}
+
+#search > form {
+  display: inline-block;
+  width: 706px;
+  height: 60px;
+  border: 1px solid #03c75a;
+  border-radius: 33px;
+  text-align: left;
+}
+
+#search > form > input{
+  width: 480px;
+  height: 58px;
+  padding: 17px 0px;
+  border: none;
+  outline: none;
+}
+
+#search > form a {
+  display: inline-block;
+  width: 68px;
+  height: 58px;
+  padding: 17px;
+  margin-right: 12px;
+}
+
+#search > form svg{
+  width: 24px;
+  height: 24px;
+}
