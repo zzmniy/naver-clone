@@ -1,15 +1,23 @@
 html,
-body {
+body{
+  list-style-type: none;
   margin: 0px;
   padding: 0px;
   font-size: 10.5px;
   line-height: 10.5px;
+  letter-spacing: -0.4px;
+  font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
 }
 
 form, ul{
   margin: 0;
   padding: 0;
 }
+
+ul{
+  list-style-type: none;
+}
+
 
 * {
   box-sizing: border-box;
@@ -89,13 +97,14 @@ form, ul{
 #wrap-center {
   display: inline-block;
   width: 1280px;
-  height: 267px;
+  margin: 0 auto;
 }
 
 #header {
   position: relative;
   text-align: left;
   height: 64px;
+  margin: 0 auto;
 }
 
 #header-hamburger,
@@ -147,8 +156,7 @@ form, ul{
 
 #header-hamburger:hover > div {
   position: relative;
-  top: 3px;
-  left: 1px;
+
 }
 
 #header-hamburger:hover::before {
@@ -220,13 +228,20 @@ form, ul{
   left: 1px;
 }
 
+#search{
+  position: relative;
+  padding-top: 6px;
+}
+
+
 #search > form {
   display: inline-flex;
   width: 706px;
   height: 60px;
   border: 1px solid #03c75a;
   border-radius: 33px;
-  text-align: left;
+  text-align: left; 
+
 }
 
 #search > form:hover{
@@ -234,6 +249,7 @@ form, ul{
 }
 
 #search-svg {
+  position: relative;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -255,6 +271,22 @@ form, ul{
   width: 24px;
   height: 24px;
   fill: #03c75a;
+}
+
+
+#search-svg::after{
+  display: none;
+}
+
+#search > form:focus-within #search-svg::after{
+  position: absolute;
+  right: 0;
+  top: 20px;
+  content:"";
+  width: 1px;
+  height: 20px;
+  background-color: #e4e4e4;
+  display: inline-block;
 }
 
 #search-input {
@@ -334,4 +366,134 @@ form, ul{
   background-repeat: no-repeat;
   width: 25px;
   height: 25px;
+}
+
+#nav{
+  margin-top: 12px;
+}
+
+#nav > ul{
+  display: flex;
+  justify-content: center;
+  line-height: 20px;
+  font-size: 1.4rem;
+}
+
+#nav a{
+  text-decoration: none;
+  text-align: center;
+}
+
+#nav a div{
+  width: 44px;
+  height: 44px;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  display: inline-flex;
+}
+
+#nav a div::after{
+  position: relative;
+  z-index: 1;
+  content:"";
+  display: inline-block;
+  background-image: url(https://pm.pstatic.net/resources/asset/sp_main.74b52318.png);
+  background-size: 444px 434px;
+  background-repeat: no-repeat;
+  width: 44px;
+  height: 44px;
+  position: relative;
+  z-index: 1;
+  margin: 2px;
+}
+
+#nav a:visited {
+  color: black;
+}
+
+#nav li{
+  width: 48px;
+  height: 48px; 
+  margin-left: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+#nav li a div::before{
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: -2px;
+  left: -3px;
+  background-image: url(https://pm.pstatic.net/resources/asset/sp_main.74b52318.png);
+  background-size: 444px 434px;
+  background-position: 0px -128px;
+  background-repeat: no-repeat;
+  width: 54px;
+  height: 54px;
+}
+
+
+#nav li:nth-of-type(1) a div::after{
+  background-position: -250px -90px;
+}
+
+#nav li:nth-of-type(2) a div::after{
+  background-position: -250px 0px;
+}
+
+#nav li:nth-of-type(3) a div::after{
+  background-position: -201px -98px;
+}
+
+#nav li:nth-of-type(4) a div::after{
+  background-position: -90px -209px;
+}
+
+#nav li:nth-of-type(5) a div::after{
+  background-position: 0px -209px;
+}
+
+#nav li:nth-of-type(6) a div::after{
+  background-position: -180px -209px;
+}
+
+#nav li:nth-of-type(7) a div::after{
+  background-position: -45px -209px;
+}
+
+#nav li:nth-of-type(8) a div::after{
+  background-position: -201px 0px;
+  margin: 0;
+}
+
+#nav li:nth-of-type(9) a div::after{
+  background-position: -225px -209px;
+}
+
+#nav li:nth-child(10){
+  position: relative;
+}
+
+#nav li:nth-of-type(10) img{
+  position: absolute;
+  top: 0;
+}
+
+#nav li:nth-of-type(10) a div::after{
+  background: none;
+}
+
+#nav li:nth-of-type(11) a div::after{
+  background-position: -250px -135px;
+}
+
+#nav li span{
+  display: inline-block;
+  margin-top: 7px;
+}
+
+#nav li:nth-of-type(8) a span{
+  margin-top: 9px;
 }
