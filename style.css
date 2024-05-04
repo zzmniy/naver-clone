@@ -14,6 +14,10 @@ form, ul{
   padding: 0;
 }
 
+a{
+  text-decoration: none;
+}
+
 ul{
   list-style-type: none;
 }
@@ -95,7 +99,6 @@ ul{
 }
 
 #wrap-center {
-  display: inline-block;
   width: 1280px;
   margin: 0 auto;
 }
@@ -414,10 +417,7 @@ ul{
 
 #nav li{
   width: 48px;
-  height: 48px; 
   margin-left: 15px;
-  display: flex;
-  justify-content: center;
 }
 
 #nav li a div::before{
@@ -463,9 +463,19 @@ ul{
   background-position: -45px -209px;
 }
 
+#nav li:nth-of-type(8) a div{
+  display: block;
+}
+
+#nav li:nth-of-type(8) a div::before{
+  left: 0;
+}
+
 #nav li:nth-of-type(8) a div::after{
   background-position: -201px 0px;
-  margin: 0;
+  width: 48px;
+  height: 48px;
+  top: -2px;
 }
 
 #nav li:nth-of-type(9) a div::after{
@@ -478,7 +488,8 @@ ul{
 
 #nav li:nth-of-type(10) img{
   position: absolute;
-  top: 0;
+  top: 3px;
+  left: 4px;
 }
 
 #nav li:nth-of-type(10) a div::after{
@@ -489,11 +500,158 @@ ul{
   background-position: -250px -135px;
 }
 
+#nav li:nth-of-type(11) span{
+  display: none;
+}
+
 #nav li span{
   display: inline-block;
   margin-top: 7px;
 }
 
 #nav li:nth-of-type(8) a span{
-  margin-top: 9px;
+  margin-top: 14px;
+  position: relative;
+  left: 4px;
 }
+
+#main{
+  margin-top: 51px;
+  display: flex;
+}
+
+#main-left{
+  width: 830px;
+  margin-right: 30px;
+}
+
+#main-right{
+  width: 420px;
+}
+
+#main-left-ad, #main-right-ad{
+  background-color: gray;
+}
+
+aside[id$=ad]{
+  border-radius: 8px;
+}
+
+#main-left-ad{
+  height: 130px;
+}
+
+section[id^=main]{
+  box-shadow: 0 0 0 1px #e3e5e8, 0 1px 2px 0 rgba(0, 0, 0, .04);
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+aside[id^=main]{
+  margin-bottom: 16px;
+}
+
+#main-newstand{
+  height: 426px;
+}
+
+#main-shopping{
+  height: 560px;
+}
+
+#main-login{
+  height: 164px;
+  padding: 21px 20px 18px;
+  font-size: 1.4rem;
+  display: flex;
+  flex-flow: column;
+}
+
+#main-login > div{
+  width: 380px;
+  height: 20px;
+  margin: 0px;
+}
+
+#main-login > div:first-of-type{
+  line-height: 20px;
+}
+
+#main-login-button {
+  width: 380px;
+  height: 56px;
+  margin-top: 13px;
+  padding: 17px 0;
+  background-color: #03c75a;
+  border-radius: 4px;
+  color: white;
+}
+
+#main-login-button i{
+  background-image: url(./img/sp_main.png);
+  background-size: 444px 434px;
+  background-position: -55px -166px;
+  background-repeat: no-repeat;
+  width: 72px;
+  height: 14px;
+  display: inline-block;
+  margin: 3px 8px 0 0;
+  vertical-align: -1;
+}
+
+#main-login > div:last-of-type {
+  font-size: 1.3rem;
+  width: 380px;
+  height: 20px;
+  margin: 16px 0px 0px;
+}
+
+#main-login > div:last-of-type >a:nth-of-type(2)::before,
+#main-login > div:last-of-type >a:nth-of-type(2)::after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 12px;
+  background-color: var(--color_dot_divider);
+  margin: 4px 11px 0;
+}
+
+#main-login > div > a {
+  color: var(--color_caption2);
+  margin-top: 16px;
+  font-size: 1.3rem;
+  letter-spacing: -0.4px;
+}
+
+#main-login > div:last-of-type > a:hover{
+  text-decoration: underline;
+}
+
+#main-right-ad{
+  height: 260px;
+}
+
+.main-weather-and-stock{
+  padding: 0 18px;
+}
+
+.main-weather-and-stock > header{
+  height: 57px;
+  padding: 6px 0px;
+}
+
+.main-weather-and-stock > div{
+  border-top: 1px solid var(--color_border_in);
+}
+
+#main-weather{
+  height: 236px;
+}
+
+#main-stock{
+  height: 236px;
+}
+
+
+
+
