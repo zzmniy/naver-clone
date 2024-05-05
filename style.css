@@ -194,8 +194,8 @@ ul{
 
 #header-talk {
   right: 40px;
-  width: 44px;
-  height: 44px;
+  width: 46px;
+  height: 46px;
   padding: 10px;
 }
 
@@ -373,6 +373,8 @@ ul{
 
 #nav{
   margin-top: 12px;
+  display: flex;
+  justify-content: center;
 }
 
 #nav > ul{
@@ -380,6 +382,10 @@ ul{
   justify-content: center;
   line-height: 20px;
   font-size: 1.4rem;
+  width: 676px;
+  height: 75px;
+  position: relative;
+  left: -2px;
 }
 
 #nav a{
@@ -394,6 +400,7 @@ ul{
   position: relative;
   text-align: center;
   display: inline-flex;
+  left: 1px;
 }
 
 #nav a div::after{
@@ -416,8 +423,13 @@ ul{
 }
 
 #nav li{
-  width: 48px;
-  margin-left: 15px;
+  width: 64px;
+  height: 75px;
+  margin-left: -3px;
+}
+
+#nav li:nth-of-type(1){
+  margin-left: 0px;
 }
 
 #nav li a div::before{
@@ -465,6 +477,7 @@ ul{
 
 #nav li:nth-of-type(8) a div{
   display: block;
+  left: -1px;
 }
 
 #nav li:nth-of-type(8) a div::before{
@@ -489,7 +502,7 @@ ul{
 #nav li:nth-of-type(10) img{
   position: absolute;
   top: 3px;
-  left: 4px;
+  left: 11px;
 }
 
 #nav li:nth-of-type(10) a div::after{
@@ -506,11 +519,15 @@ ul{
 
 #nav li span{
   display: inline-block;
-  margin-top: 7px;
+  margin-top: 5px;
+  height: 20px;
+  width: 64px;
+  text-align: center;
+  left: 1px;
 }
 
 #nav li:nth-of-type(8) a span{
-  margin-top: 14px;
+  margin-top: 11px;
   position: relative;
   left: 4px;
 }
@@ -553,6 +570,143 @@ aside[id^=main]{
 
 #main-newstand{
   height: 426px;
+  display: flex;
+  flex-flow: column;
+}
+
+#main-newstand-gray{
+  display: flex;
+  justify-content: flex-start;
+  height: 50px;
+  padding: 12px 20px;
+  margin: 0 20px;
+  border-radius: 4px;
+  background-color: var(--color_option_bg);
+  font-size: 1.4rem;
+}
+
+#main-newstand a:hover{
+  text-decoration: underline;
+}
+
+#main-newstand a:visited{
+  color: inherit;
+}
+#main-newstand-top > header > a:nth-of-type(2)::before{
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    background-color: #d3d5d7;
+    background-color: var(--color_dot_divider);
+    margin: 9px 7px 0;
+    border-radius: 50%;
+    vertical-align: top;
+}
+
+#main-newstand-top > header > a:nth-of-type(n+3){
+  padding-left: 26px;
+}
+
+#main-newstand-top > header > a:nth-of-type(n+3)::before{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 4px;
+  left: 13px;
+  width: 1px;
+  height: 15px;
+  background-color: #d3d5d7;
+  background-color: var(--color_dot_divider);
+  transform: skewX(-15deg);
+}
+
+#main-newstand-top > header a{
+    position: relative;
+    display: inline-block;
+    font-size: 1.6rem;
+    line-height: 23px;
+    font-weight: 800;
+    vertical-align: top;
+    color: rgba(8, 8, 8, .5);
+}
+
+#main-newstand-top > header > a span{
+  background-color: var(--color_live_news_price);
+  color: white;
+  border-radius: 9px;
+  font-size: 1.1rem;
+  padding: 0 5px 0 4px;
+  font-weight: 900;
+  display: inline-block;
+  line-height: 18px;
+  vertical-align: top;
+  margin: 3px 0 0 px;
+}
+
+#main-newstand-top > header > a span::before{
+  content: "";
+    display: inline-block;
+    background-image: url(https://pm.pstatic.net/resources/asset/sp_main.74b52318.png);
+    background-size: 444px 434px;
+    background-position: -335px -319px;
+    background-repeat: no-repeat;
+    width: 14px;
+    height: 10px;
+    margin: 4px 3px 0 0;
+    vertical-align: top;
+}
+
+
+
+#main-newstand-newshome{
+  display: flex;
+  justify-content: flex-end;
+}
+
+#main-newstand-grid{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-rows: 56px 56px 56px 56px;
+  grid-template-columns: 131.27px 131.27px 131.27px 131.27px 131.27px 131.27px;
+  border: 1px solid var(--color_border_in);
+  border-radius: 4px;
+  margin: 18px 20px;
+  grid-gap: 1px;
+  background-color: var(--color_border_in);
+  grid-template-columns: repeat(6, 1fr);
+}
+
+#main-newstand-grid > div{
+  height: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#main-newstand-top{
+  flex: 1;
+}
+
+#main-newstand header{
+  font-size: 1.6rem;
+  color: rgba(8, 8, 8, .5);
+  display: flex;
+  justify-content: flex-start;
+  padding: 18px 20px 17px;
+  line-height: 23px;
+}
+
+#main-newstand header .bold{
+  font-weight: bold;
+  color: black;
+}
+
+#main-newstand footer{
+  padding: 10px 0 11px;
+  border-top: 1px solid var(--color_border_in);
 }
 
 #main-shopping{
